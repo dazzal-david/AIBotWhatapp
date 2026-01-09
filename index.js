@@ -4,7 +4,7 @@ import qrcode from 'qrcode-terminal';
 import fs from 'fs';
 
 // --- CONFIGURATION ---
-const OPENROUTER_API_KEY = ''; // <--- APPPPPIII
+const OPENROUTER_API_KEY = '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'; // <--- APPPPPIII
 const OPENROUTER_MODEL = 'qwen/qwen3-14b:free'; 
 const SYSTEM_PROMPT = "You are a helpful AI assistant on WhatsApp. Keep your answers concise and friendly.";
 
