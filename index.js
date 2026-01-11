@@ -3,9 +3,23 @@ import pino from 'pino';
 import qrcode from 'qrcode-terminal';
 import fs from 'fs';
 
+import express from "express";
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("WhatsApp AI Bot is running 🚀");
+});
+
+app.listen(PORT, () => {
+  console.log(`HTTP server listening on port ${PORT}`);
+});
+
+
 // --- CONFIGURATION ---
-const OPENROUTER_API_KEY = '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'; // <--- APPPPPIII
-const OPENROUTER_MODEL = 'qwen/qwen3-14b:free'; 
+const OPENROUTER_API_KEY = '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'; // <--- APPPPPIII
+const OPENROUTER_MODEL = 'meta-llama/llama-3.3-70b-instruct:free'; 
 const SYSTEM_PROMPT = "You are a helpful AI assistant on WhatsApp. Keep your answers concise and friendly.";
 
 // Creates new folder for auth
